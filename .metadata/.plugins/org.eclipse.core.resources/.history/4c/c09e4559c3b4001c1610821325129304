@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<flow name="dw-tutorial4-getFlight-wsFlow" doc:id="021e2451-1c6c-4827-8908-a9aa05be13b1" >
+		<http:listener doc:name="Listener" doc:id="61021772-7c9f-43ce-8de9-a8874f952faa" config-ref="HTTP_Listener_config" path="/flight"/>
+		<db:select doc:name="Select" doc:id="502fa8ec-77d8-4240-a64e-02210955c684" config-ref="Database_Config">
+			<db:sql ><![CDATA[SELECT * FROM American WHERE id = ID;]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{'ID' : attributes.queryParams.id}]]]></db:input-parameters>
+		</db:select>
+	</flow>
+</mule>
