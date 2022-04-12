@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.mule.tooling.runtime.muleServerLaunchType">
     <stringAttribute key="launch_mule_server_version" value="org.mule.tooling.server.4.4.0.ee"/>
-    <stringAttribute key="mule-agent-port" value="56339"/>
-    <stringAttribute key="mule-agent-token-auth" value="74acd9ea-957e-4416-9325-a881f4868592"/>
+    <stringAttribute key="mule-agent-port" value="54038"/>
+    <stringAttribute key="mule-agent-token-auth" value="ae7df622-a3a1-429e-ae7b-50ea11cc74bb"/>
     <listAttribute key="mule-project-names">
         <listEntry value="apdev-examples"/>
     </listAttribute>

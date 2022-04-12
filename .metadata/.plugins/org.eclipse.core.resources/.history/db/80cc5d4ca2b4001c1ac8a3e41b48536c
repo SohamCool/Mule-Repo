@@ -1,5 +1,0 @@
-package com.flights.ws.ui.model.request;
-
-public class flightDetailsRequestModel {
-
-}
